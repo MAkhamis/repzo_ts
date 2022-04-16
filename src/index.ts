@@ -17,15 +17,15 @@ export default class Repzo {
     this.headers = {
       "api-key": apiKey,
       "Content-Type": "application/json",
-      Accept: "application/json",
+      Accept: "application/json"
     };
-    if (options.headers) Object.assign(this.headers, options.headers);
+    if (options?.headers) Object.assign(this.headers, options.headers);
   }
 
   private async _fetch(baseUrl: string, path: string, params?: Params) {
     let res = await axios.get(baseUrl + path, {
       params,
-      headers: this.headers,
+      headers: this.headers
     });
     return res.data;
   }
@@ -38,7 +38,7 @@ export default class Repzo {
   ) {
     let res = await axios.post(baseUrl + path, body, {
       params,
-      headers: this.headers,
+      headers: this.headers
     });
     return res.data;
   }
@@ -51,7 +51,7 @@ export default class Repzo {
   ) {
     let res = await axios.put(baseUrl + path, body, {
       params,
-      headers: this.headers,
+      headers: this.headers
     });
     return res.data;
   }
@@ -59,7 +59,7 @@ export default class Repzo {
   private async _delete(baseUrl: string, path: string, params?: Params) {
     let res = await axios.delete(baseUrl + path, {
       params,
-      headers: this.headers,
+      headers: this.headers
     });
     return res.data;
   }
@@ -75,10 +75,6 @@ export default class Repzo {
         params
       );
       return res;
-      //   return axios.get(this.svAPIEndpoint + this.client.path, {
-      //     params: params,
-      //     headers: this.headers,
-      //   });
     },
 
     get: async (
@@ -90,9 +86,6 @@ export default class Repzo {
         this.client._path + `/${id}`,
         params
       );
-      //   return axios.get(this.svAPIEndpoint + this.client.path + `/${id}`, {
-      //     params: params,
-      //   });
     },
 
     create: async (
@@ -100,9 +93,6 @@ export default class Repzo {
     ): Promise<Service.Client.Create.Result> => {
       let res = await this._create(this.svAPIEndpoint, this.client._path, body);
       return res;
-      //   return axios.post(this.svAPIEndpoint + this.client.path, body, {
-      //     headers: this.headers,
-      //   });
     },
 
     update: async (
@@ -115,9 +105,6 @@ export default class Repzo {
         body
       );
       return res;
-      //   return axios.put(this.svAPIEndpoint + this.client.path + `/${id}`, body, {
-      //     headers: this.headers,
-      //   });
     },
 
     remove: async (
@@ -128,9 +115,6 @@ export default class Repzo {
         this.client._path + `/${id}`
       );
       return res;
-      //   return axios.delete(this.svAPIEndpoint + this.client.path + `/${id}`, {
-      //     headers: this.headers,
-      //   });
-    },
+    }
   };
 }

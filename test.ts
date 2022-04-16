@@ -1,4 +1,4 @@
-import Repzo from "./index.js";
+import Repzo from "./src/index.js";
 let repzo = new Repzo("");
 let clients = repzo.client.find({ search: "Mecca" });
 console.log(clients);

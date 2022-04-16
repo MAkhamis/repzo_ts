@@ -1,0 +1,25 @@
+{
+  "name": "repzo",
+  "version": "1.0.0",
+  "description": "Repzo TypeScript SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Repzo/repzo-ts.git"
+  },
+  "keywords": [
+    "repzo"
+  ],
+  "author": "mohammad khamis <Mohammad.khamis@repzoapp.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Repzo/repzo-ts/issues"
+  },
+  "homepage": "https://github.com/Repzo/repzo-ts#readme",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
